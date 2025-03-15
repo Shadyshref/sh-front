@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@tailwind components;
+
+
+@theme {
+  --font-primary: "Poppins", serif;
+  --color-primary: #54ddeb;
+  --color-drimar: #6fe3ef;
+}
+
+@layer {
+  .container {
+    @apply px-[30px] mx-auto;
+  }
+
+  .element-center {
+    @apply flex justify-center items-center;
+  }
+
+  .btn {
+    @apply bg-[#6fe3ef] hover:bg-[#54ddeb] transition-all duration-200;
+  }
+
+  @keyframes changeanimate {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px); 
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-change {
+    animation: changeanimate 1s ease-in-out infinite;
+  }
+}
+
+
+
+
+body{
+  background-color: #181e2a;
+  height: 400px;
+  
+}
+
+
